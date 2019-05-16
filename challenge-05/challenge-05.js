@@ -14,7 +14,7 @@ function getArray(array) {
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-console.log(getArray[1]);
+console.log( getArray(array)[1] );
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -74,10 +74,10 @@ function book(nomeLivro) {
     }
   }
 
-  if (!!!nomeLivro)
+  if (!nomeLivro)
     return livrosCadastrados;
 
-  if (!!!livrosCadastrados[nomeLivro])
+  if (!livrosCadastrados[nomeLivro])
     return 'Não temos este livro cadastrado. Tente novamente com outro nome.';
 
   return livrosCadastrados[nomeLivro];
@@ -93,18 +93,20 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-console.log( 'O livro Ócio criativo tem ' + book('Ócio criativo').quantidadePaginas + " página!" );
+var nomeLivro = 'Ócio criativo';
+
+console.log( 'O livro ' + nomeLivro + ' tem ' + book(nomeLivro).quantidadePaginas + " página!" );
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-console.log( 'O autor do livro Ócio criativo é o ' + book('Ócio criativo').autor );
+console.log( 'O autor do livro ' + nomeLivro + ' é o ' + book(nomeLivro).autor );
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-console.log( 'O livro Ócio criativo foi publicado pela editora ' + book('Ócio criativo').editora );
+console.log( 'O livro ' + nomeLivro + ' foi publicado pela editora ' + book(nomeLivro).editora );
